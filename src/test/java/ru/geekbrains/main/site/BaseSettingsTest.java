@@ -2,6 +2,8 @@ package ru.geekbrains.main.site;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -27,5 +29,13 @@ public abstract class BaseSettingsTest {
     @AfterEach
     public void afterAllTest() {
         driver.quit();
+    }
+
+    public void searchTextJava() {
+        WebElement buttonSearch = driver.findElement(By.cssSelector("a>[class=\"svg-icon icon-search \"]"));
+        buttonSearch.click();
+
+        WebElement inputSearch = driver.findElement(By.cssSelector("[class=\"search-panel__search-field\"]"));
+        inputSearch.sendKeys("java");
     }
 }
