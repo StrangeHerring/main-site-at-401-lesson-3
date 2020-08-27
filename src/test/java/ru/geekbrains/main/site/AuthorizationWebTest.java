@@ -1,10 +1,18 @@
 package ru.geekbrains.main.site;
 
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import ru.geekbrains.main.site.base.BaseWebSettingsTest;
 import ru.geekbrains.main.site.page.AuthorizationPage;
 import ru.geekbrains.main.site.page.ContentPage;
 
+@Epic("Web UI тесты")
+@Feature("Авторизация")
+@Story("Успешная авторизация")
+@DisplayName("Авторизация")
 public class AuthorizationWebTest extends BaseWebSettingsTest {
 
     @Test

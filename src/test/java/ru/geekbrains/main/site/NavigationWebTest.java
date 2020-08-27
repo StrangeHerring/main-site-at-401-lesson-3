@@ -1,5 +1,9 @@
 package ru.geekbrains.main.site;
 
+import io.qameta.allure.Epic;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -8,6 +12,10 @@ import ru.geekbrains.main.site.page.ContentPage;
 
 import java.util.stream.Stream;
 
+@Epic("Web UI тесты")
+@Feature("Навигация")
+@Story("Переход по навигации")
+@DisplayName("Навигация")
 public class NavigationWebTest extends BaseWebSettingsTest {
 
     @ParameterizedTest(name = "{index} => Нажатие на: {0}")
@@ -29,7 +37,7 @@ public class NavigationWebTest extends BaseWebSettingsTest {
                 "Тесты"
         );
     }
-
+    @DisplayName("Проверка страницы Блог с PopUP")
     @Test
     public void checkNavigationPopUp() {
         driver.get("https://geekbrains.ru/career");
