@@ -1,5 +1,6 @@
 package ru.geekbrains.main.site.block;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -27,6 +28,7 @@ public class HeaderBlock extends BasePage {
         return this;
     }
 
+    @Step("Ввод в функционал Поиска текст: '{text}'")
     public SearchPage searchText(String text) {
         buttonSearch.click();
         inputSearch.sendKeys(text);
